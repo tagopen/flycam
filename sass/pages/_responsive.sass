@@ -1,0 +1,292 @@
++screen(320, 767)
+  +comment("header style")    
+  .header
+    padding-bottom: 130px
+    &__nav
+      margin-bottom: 35px  
+    &__img--dron
+      transform: scale(0.4)
+      margin-top: -50px
+      margin-left: -150px  
+    .logo
+      margin: 0 5px 0 0
+      img
+        height: 40px
+        width: 40px
+    .navbar
+      &__header
+        margin-left: 0 !important
+        float: left
+        width: 52%
+      &__title  
+        font: 400 18px/20px "bender", sans-serif
+        &--text
+          font: 400 12px/20px "bender", sans-serif
+          display: block
+      &__phone,
+      &__call 
+        font: 400 12px/20px "Open Sans", sans-serif  
+      &__call--btn
+        margin: 4px 0 0 5px  
+      .nav__right
+        width: 48%     
+  .offer
+    &__heading
+      font: 400 24px/30px "bender", sans-serif
+    &__subheading
+      font: 400 16px/22px "bender", sans-serif  
+    &__btn--text
+      font-size: 12px
+      padding-left: 10px
+      padding-right: 10px  
+  .scroll__link
+    bottom: -100px
+  +comment("advantages style")  
+  .block__heading  
+    padding: 15px
+    font: 400 22px/28px "bender", sans-serif   
+  .advantages
+    &__box    
+      padding: 15px 0 
+      .ic
+        margin: 0 15px 0 0
+  .box__heading--name   
+    display: inline-block
+    font-size: 30px
+  +comment("reasons style")  
+  .reasons  
+    background: url(../img/reasonsbg1.png) no-repeat center center
+    padding: 10px 0 40px
+    +cover
+    .block__heading
+      margin-bottom: 25px
+    &__title
+      padding: 10px 0
+      font: 300 24px/28px "benderlight", sans-serif 
+    &__box
+      height: 240px 
+      &--info
+        padding: 0 5px
+        line-height: 240px
+        p
+          text-align: center
+          font-size: 10px  
+          line-height: 12px
+  +comment("video style")
+  .video
+    >.container
+      margin-bottom: 160px 
+      background: none
+    &__slider
+      .slick-slide
+        iframe
+          width: 100%
+          height: 200px
+      &--small      
+        .slick-prev
+          left: -15px
+        .slick-next
+          right: -15px 
+        .slick-prev,
+        .slick-next
+          top: 15%
+          transform: scale(0.6)       
+    &__heading
+      margin-bottom: 0            
+  +comment("client style")  
+  .client
+    .text-left
+      text-align: center
+  +comment("order style")  
+  .order
+    background: url(../img/orderbg1.png) no-repeat center center
+    +cover
+    padding: 30px 0 50px
+    &__dron
+      img
+        transform: scale(0.7)
+        margin-left: -50px
+    &__heading   
+      text-align: center
+      font: 300 24px/28px "benderlight", sans-serif
+      margin-bottom: 0
+    &__text
+      text-align: center
+      padding-top: 0
+    .form__group    
+      padding: 0
+      .fa
+        right: 30px
+    .form__btn p
+      padding: 20px 40px 20px 20px !important
+    &__btn
+      padding-right: 0    
+  +comment("solve style") 
+  .solve
+    padding: 10px 0
+    &__row
+      margin-bottom: 0
+    &__img
+      margin: 0 auto 10px
+    &__text
+      text-align: center   
+      line-height: 140px   
+      padding-left: 5px
+      padding-right: 5px  
+  +comment("process style")  
+  .process
+    padding: 20px 0 30px
+    &__heading
+      margin-bottom: 70px
+    &__box
+      height: 230px   
+      &--btn
+        padding: 10px
+        font: 600 12px/14px "Open Sans", sans-serif
+    &__body--form .carousel-control
+      top: 140px
+  +comment("comment style") 
+  .comment
+    padding: 40px 0
+    &__slider
+      &--box
+        overflow: hidden  
+        .ic
+          line-height: 200px 
+      &--text
+        span
+          font: italic 14px/18px "Open Sans", sans-serif  
+    &__slider .slick-dots    
+      bottom: -30px     
+  +comment("scheme style") 
+  .scheme
+    &__row
+      padding: 15px
+    &__info
+      p    
+        font: 400 20px/24px "benderbold", sans-serif
+      span  
+        font: 400 14px/18px "benderbold", sans-serif
+    &__img
+      transform: scale(0.6)
+  +comment("feedback style") 
+  .feedback
+    padding: 30px 0      
+    &__heading
+      font: 300 24px/28px "benderlight", sans-serif
+    .form__group
+      padding: 0
+      .fa
+        right: 30px
+    &__btn
+      padding: 0  
+      .form__btn p
+        padding: 20px 40px 20px 20px !important
+  +comment("footer style")  
+  .footer
+    .navbar
+      &__title--text 
+        display: block 
+      &__header
+        text-align: center   
+        .logo
+          margin: -15px 15px 0 15px    
+    .copyright
+      +cover
+      padding: 180px 15px 60px    
+      &__text
+        padding: 0
+        text-align: center
+        font-size: 12px  
+  +comment("modal style") 
+  .modal
+    &__body
+      padding: 10px 20px 
+      .close
+        top: -10px
+        right: -10px
+      &--form
+        .form-group
+          padding: 0
+          .fa
+            right: 30px
+        .form__btn
+          width: 100% 
+          p
+            padding: 20px 50px 20px 10px    
+        .form__heading
+          font: 300 32px/36px "benderlight", sans-serif
+          &--text
+            display: block
+        .text-center
+          position: relative
+          .form__btn--chevron
+            right: 0
+            position: absolute  
+  +comment("thanks header style")           
+  .thanks
+    &__header
+      padding-bottom: 100px
+      background-size: 160% 70%
+      .logo
+        margin: 0 10px 0 20px  
+    &__copyright    
+      padding: 0
+      .copyright__text
+        padding: 0 10px
+        text-align: center
+        p
+          font-size: 14px
+  .offer--dron   
+    img
+      transform: scale(0.5)
+      margin-left: -150px          
++r(768)
+  +comment("modal style") 
+  .modal__body--form .form__btn p
+    padding: 20px 90px 20px 90px 
+  +comment("video style") 
+  .video
+    >.container
+      margin-bottom: 160px 
+      background: none
+    &__slider
+      .slick-slide
+        iframe
+          width: 600px
+          height: 350px
++r(1200)
+  +comment("video style") 
+  .video
+    >.container
+      margin-bottom: 160px 
+      background: none
+    &__slider
+      .slick-slide
+        iframe
+          width: 900px
+          height: 500px
+  +comment("advantages style")  
+  .box__heading--name
+    display: inline-block
+  .advantages__box .ic 
+    margin-bottom: 0
+  +comment("process style")
+  .process__box
+    height: 380px  
+    &--info 
+      padding-top: 140px 
+  +comment("modal style")
+  .form__btn p
+    padding: 20px 90px 20px 90px  
+  +comment("feedback style")      
+  .feedback__contact--box
+    margin-bottom: 20px
+  +comment("footer style") 
+  .copyright
+    padding-top: 200px
+    &__text
+      padding-right: 150px  
+  .footer .navbar-header
+    padding-left: 0      
+

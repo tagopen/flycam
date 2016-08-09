@@ -1,0 +1,650 @@
++comment('general style')
++font('bender', 'bender')
++font('benderbold', 'benderbold')
++font('benderlight', 'benderlight')
++ic
+@each $ic in scrollbottom, advantages1, advantages2, advantages3, advantages4, solve1, solve2, solve3, solve4, scheme1, scheme2, comment1, comment2, comment3, client1, client2, client3, client4, client5, client6
+  .ic-#{$ic}
+    +sb(#{$ic})
+body
+  font-family: 'bender'
+  background-color: #fbfbfb
+  overflow-x: hidden
+a,
+a:hover,
+a:focus
+  color: inherit
+  text-decoration: none
+  outline: none 
++comment("modal style")
+.modal__content
+  opacity: 0.9
+  background-color: black
+  border: 2px solid #fdff39
+  +br(0)
+.modal__body
+  padding: 60px 50px
+  .close
+    position: absolute
+    z-index: 10
+    height: 36px
+    width: 36px
+    top: -20px
+    right: -20px
+    background-color: #000
+    opacity: 1
+    +br(50%)
+    border: 3px solid #fdff39
+    color: #fff   
+.form
+  &__heading
+    font: 300 48px/50px 'benderlight', sans-serif
+    color: #fff
+    &--text    
+      font-family: 'benderbold'
+  &-group    
+    padding: 0 40px
+    position: relative
+    max-width: 500px
+    margin-bottom: 32px
+    .form-control
+      margin-bottom: 0  
+      padding: 20px 50px 20px 20px
+      background: transparent
+      height: auto
+      color: #fdff39
+      font: 400 16px/20px 'Open Sans', sans-serif
+      +br(0)
+      &:focus
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(253,255,57,.6)
+        border-color: #fdff39 
+        ~.fa
+          color: #fdff39 
+      &::-moz-placeholder
+        color: #ccc
+      &::-webkit-input-placeholder 
+        color: #ccc 
+    .fa
+      position: absolute
+      top: 18px
+      right: 60px
+      font-size: 20px
+  &__group
+    padding-left: 0   
+    max-width: 455px
+  &__btn
+    padding: 0
+    background-color: #fdff39
+    +br(2px)
+    font: 600 16px/16px 'Open Sans', sans-serif
+    color: #000
+    border: 0
+    max-width: 415px
+    &:hover
+      background-color: #f4e486 !important
+    p
+      display: inline-block
+      padding: 20px 30px 20px 20px
+      margin-bottom: 0
+    &--chevron
+      display: inline-block
+      background-color: #edf234
+      padding: 20px 
++comment("header style")              
+.header
+  padding: 15px 0 200px
+  background: url(../img/mainbg.png) no-repeat center center
+  +cover
+  &__img--dron
+    margin-top: -70px     
+    margin-left: -80px 
+.header__nav
+  padding-bottom: 15px
+  margin-bottom: 100px  
+.logo
+  padding: 0
+  margin: -15px 20px 0 -10px
+  height: auto
+.navbar
+  &__title
+    color: #fff
+    font: 400 38px/34px 'bender', sans-serif
+    &--text
+      font: 400 18px/20px 'bender', sans-serif
+  &__phone
+    display: inline-block
+    color: #fff 
+    font: 400 20px/22px 'Open Sans', sans-serif
+    &--number
+      display: block
+  &__call
+    display: inline-block 
+    font: 400 14px/18px 'Open Sans', sans-serif 
+    border-bottom: 1px dashed #fff
+    &--btn
+      margin-top: 4px
+      vertical-align: top
+      background-color: #fdff39
+      +br(0)
+      border: 0
+      height: 38px
+      margin-left: 12px
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited
+        background-color: #f4e486 !important
+      i
+        color: #000
+.header__offer
+  >.container
+    position: relative        
+.offer
+  &__heading
+    color: #fff
+    font: 400 48px/52px 'bender', sans-serif    
+    margin-bottom: 30px
+  &__subheading
+    color: #fff
+    font: 400 30px/38px 'bender', sans-serif
+    margin-bottom: 50px
+    &--text
+      display: block  
+      color: #fdff39 
+      font-family: 'benderbold'
+      letter-spacing: 1px
+  &__btn
+    background-color: transparent
+    padding: 0
+    border: 3px solid #fdff39
+    +br(3px)
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited
+      background-color: rgba(0, 0, 0, 0.8) !important
+      border: 3px solid #fdff39
+    &--text
+      display: inline-block
+      padding: 15px 25px 15px 35px
+      margin-bottom: 0
+      font: 400 16px/18px 'Open Sans', sans-serif
+    &--camera
+      display: inline-block  
+      padding: 15px
+      background-color: #fdff39
+      color: #000
+.scroll
+  &__link
+    position: absolute
+    left: 50%
+    bottom: -150px
+    margin-left: -30px  
+    text-align: center
+  &__text
+    display: block
+    margin-top: 10px
+    color: #fff
++comment("advantage style") 
+.block__heading
+  background-color: #fdff39
+  padding: 20px 50px
+  display: inline-block
+  font: 400 48px/48px 'bender', sans-serif
+  text-transform: uppercase
+  margin-bottom: 35px
+  &--text
+    font-family: 'benderbold' 
+.advantages
+  padding: 15px 0 30px
+  &__box
+    padding: 30px 60px
+    text-align: center
+    .ic
+      margin: 0 15px 15px 0
+      vertical-align: bottom
+.box
+  &__heading
+    margin-bottom: 30px   
+    &--name
+      font: 400 36px/40px 'benderbold', sans-serif  
+      display: block
+  &__info
+    p
+      font: 400 16px/20px 'Open Sans', sans-serif
++comment("reasons style")     
+.reasons
+  padding: 35px 0 120px
+  position: relative
+  background: url(../img/reasonsbg.png) no-repeat center top
+  background-size: 150% 110%
+  &__heading
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+  .block__heading
+    margin-bottom: 85px  
+  &__title
+    padding: 30px
+    color: #fff
+    font: 300 36px/36px 'benderlight', sans-serif
+    text-transform: uppercase
+    margin: 0  
+  &__box
+    text-align: center
+    position: relative
+    padding: 0
+    overflow: hidden
+    height: 300px
+    &:hover
+      .reasons__box--info
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    &--img1
+      background: url(../img/reason1.png) no-repeat 
+    &--img2
+      background: url(../img/reason2.png) no-repeat   
+    &--img3
+      background: url(../img/reason3.png) no-repeat   
+    &--img4
+      background: url(../img/reason4.png) no-repeat
+    &--img1,
+    &--img2,
+    &--img3,
+    &--img4
+      +cover
+      background-position: center center
+    &--info
+      padding: 0 15px
+      font-family: 'Open Sans'
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: #fdff39
+      opacity: 0.9
+      -webkit-transition: all 0.5s ease
+      -moz-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+      line-height: 300px
+      font-size: 0
+      text-align: left
+      p
+        display: inline-block
+        font-size: 14px
+        line-height: normal
+        vertical-align: middle   
++comment("video style")   
+.video
+  padding: 30px 0 0
+  position: relative
+  background: url(../img/clientbg.png) no-repeat center 100%
+  >.container
+    margin-bottom: 228px
+    background: url(../img/camerabg.png) no-repeat center center
+  &__heading
+    margin-bottom: 90px
+    z-index: 2
+  &__slider
+    .slick-slide
+      text-align: center
+      top: 5px !important
+      img
+        display: inline-block
+    &--small
+      .slick-slide
+        filter: brightness(30%) 
+      .slick-current
+        filter: brightness(100%)  
+      .slick-prev
+        left: -50px
+      .slick-next
+        right: -50px 
+      .slick-prev, .slick-next
+        top: 50%  
++comment("client style")  
+.client
+  &__heading
+    margin-bottom: 50px
+    background: none
+  &__slider
+    padding-bottom: 50px
+    .slick
+      &-slide
+        text-align: center 
+        overflow: hidden
+      &-next
+        right: 0
+      &-prev
+        right: 50px
+        left: auto
+      &-prev,
+      &-next
+        z-index: 10
+        top: -75px     
++comment("order style") 
+.order
+  padding: 100px 0 210px
+  background: url(../img/orderbg.png) no-repeat center center
+  background-size: 100% 100%
+  &__heading
+    margin-bottom: 100px        
+    color: #fff  
+    text-transform: uppercase
+  &__text
+    padding-top: 75px  
+  &__btn
+    padding-right: 40px  
+    .form__btn
+      overflow: hidden
+      &--chevron
+        position: absolute
+        right: 0
++comment("solve style")   
+.solve
+  padding: 30px 0
+  background: url(../img/objectivebg.png) no-repeat scroll center 228px
+  &__row
+    margin-bottom: 30px   
+  &__img
+    text-align: center   
+    +br(50%) 
+    border: 5px solid #fdff39
+    height: 205px
+    width: 205px
+    line-height: 185px
+    &--1
+      background: url(../img/solvebg1.png) no-repeat center center
+      +cover
+    &--2
+      background: url(../img/solvebg2.png) no-repeat center center
+      +cover
+    &--3
+      background: url(../img/solvebg3.png) no-repeat center center
+      +cover
+    &--4
+      background: url(../img/solvebg4.png) no-repeat center center
+      +cover
+  &__text
+    line-height: 215px
+    font-size: 0
+    text-align: left
+    padding-right: 25px
+    p
+      display: inline-block
+      vertical-align: middle    
+      font: 400 14px/normal 'Open Sans', sans-serif
+      color: #000
++comment("process style")
+.process 
+  padding: 50px 0 40px  
+  background: url(../img/processbg.png) no-repeat center 130px 
+  &__modal
+    padding: 0
+    position: relative
+    button.close
+      position: absolute
+      top: 0
+      right: 10px
+      z-index: 10
+      opacity: 1
+      font-size: 45px
+      color: #fdff39
+  &__body 
+    &--form
+      .carousel-control
+        background-image: none
+        opacity: 1
+        top: 200px
+        width: auto
+        .fa
+          font-size: 30px
+          color: #fdff39
+      .carousel-inner .item
+        text-align: center
+        img
+          display: inline-block  
+  &__col
+    padding-left: 0
+    padding-right: 0  
+  &__heading
+    margin-bottom: 120px 
+  &__box
+    overflow: hidden  
+    position: relative
+    height: 280px
+    &:hover
+      .process__box--info
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    &--img1
+      background: url(../img/photo1.jpg) no-repeat 0 center/ cover
+    &--img2
+      background: url(../img/photo2.jpg) no-repeat 0 center/ cover
+    &--img3
+      background: url(../img/photo3.jpg) no-repeat 0 center/ cover
+    &--img4
+      background: url(../img/photo4.jpg) no-repeat 0 center/ cover
+    &--info
+      padding-top: 80px
+      text-align: center
+      position: absolute
+      top: 100%  
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: 0.9
+      background-color: #fdff39
+      -webkit-transition: all 0.5s ease
+      -moz-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+    &--btn 
+      font: 600 14px/14px 'Open Sans', sans-serif
+      color: #000 
+      padding: 12px 25px
+      border: 1px solid black
+      +br(0)
+      background-color: transparent
+      margin-top: 20px
+      &:hover
+        background-color: rgba(0, 0, 0, 1)
+        color: #fff
+    &--text
+      a
+        margin-left: 10px
+      .fa
+        padding: 5px
+        &:hover
+          color: #fff
+          background-color: #000
++comment("comment style") 
+.comment 
+  padding: 40px 0 130px 
+  &__heading
+    margin-bottom: 70px
+  &__slider
+    &--box
+      text-align: center
+      overflow: hidden
+    &--text
+      span
+        font: italic 24px/26px 'Open Sans', sans-serif 
+      .fa
+        color: #fdff39   
+        font-size: 30px
+        margin: 0 30px
+        &-quote-left
+          float: left
+        &-quote-right
+          float: right 
+    .slick-dots
+      bottom: -70px  
+      li 
+        background-color: #fff
+        border: 2px solid #555  
+        +br(50%)
+        margin: 0 10px
+      li.slick-active
+        background-color: #fdff39  
+      li button:before
+        content: ''  
++comment("scheme style")          
+.scheme
+  padding: 10px 0 45px
+  background-color: #f9f9f9
+  box-shadow: inset 1px 1.7px 2px rgba(233, 225, 225, 0.3)
+  &__row
+    padding: 50px 15px
+  &__img
+    text-align: center  
+  &__info
+    padding-left: 50px
+    p
+      font: 400 30px/30px 'benderbold', sans-serif
+      margin-bottom: 25px
+    span
+      font: 400 24px/28px 'Open Sans', sans-serif 
++comment("feedback style")      
+.feedback
+  padding: 100px 0
+  background: url(../img/feedbackbg.png) no-repeat center center
+  +cover 
+  &__heading
+    color: #fff
+    margin: 0 0 25px
+    text-transform: uppercase
+  &__subheading
+    color: #fff
+    font: 400 16px/18px 'Open Sans', sans-serif  
+  &__contact
+    padding-top: 40px
+    &--col
+      padding-top: 12px
+    &--box
+      margin-bottom: 40px
+      .fa
+        background-color: #fdff39
+        border: 3px solid #b3b445
+        height: 70px
+        width: 70px
+        +br(50%)
+        font-size: 30px
+        text-align: center
+        line-height: 65px
+    &--text
+      color: #fff
+      margin-bottom: 10px
+      font: 400 14px/14px 'Open Sans', sans-serif  
+    &--phone
+      display: block
+      margin-bottom: 5px  
+  &__btn
+    padding-right: 40px  
+    button
+      overflow: hidden  
+  .form__group
+    max-width: none
+  .form__btn
+    max-width: none  
+    position: relative
+    overflow: hidden
+    &--chevron
+      position: absolute
+      right: 0  
+  textarea
+    resize: none    
++comment("footer style")       
+.footer
+  background-color: #000  
+  padding: 65px 0 0
+  .navbar-header
+    margin-bottom: 30px
+  &__links
+    a
+      margin-right: 25px
+      &:hover
+        .fa
+          color: #fdff39
+      .fa
+        color: #fff  
+        font-size: 20px
+.copyright
+  background: url(../img/footerbg.png) no-repeat center center
+  background-size: 100% 100%
+  padding: 140px 0 100px
+  &__text
+    padding-right: 50px
+    font: 400 16px/16px 'Open Sans', sans-serif
++comment("thanks page style") 
+.thanks
+  &__header
+    padding: 15px 0 0
+    background: #000 url(../img/footerbg.png) no-repeat center 100%
+    background-size: 100% 75% 
+  &__copyright
+    padding: 140px 0 80px   
++comment("css animation") 
+@-webkit-keyframes slideInUp 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+  to 
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+@keyframes slideInUp 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+  to 
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+.slideInUp 
+  -webkit-animation-name: slideInUp
+  animation-name: slideInUp
+  animation-duration: 1.5s
+@keyframes fadeInLeft 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  to 
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+.fadeInLeft 
+  -webkit-animation-name: fadeInLeft
+  animation-name: fadeInLeft
+  animation-duration: 1.5s
+@-webkit-keyframes fadeInRight 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+  to 
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+@keyframes fadeInRight 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+  to 
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+.fadeInRight 
+  -webkit-animation-name: fadeInRight
+  animation-name: fadeInRight 
+  animation-duration: 1.5s      
